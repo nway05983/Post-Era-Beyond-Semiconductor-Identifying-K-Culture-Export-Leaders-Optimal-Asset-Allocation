@@ -11,5 +11,14 @@
 1. 데이터
   * OpenDartReader: DART 전자공시시스템 API를 활용하여 3개년 재무제표(매출, 영업이익, 자본총계 등) 수집
   * PyKRX: 국내 주식 시장의 종가(OHLCV), 시가총액 데이터 수집
-2. ㅇㄹㄴㅇㅁㄹ
-  * ㅇㄻㄴㅇ
+2. 종목 선정
+  * Top-Down 방식으로 유니버스를 선정 후, Bottom-Up 방식으로 다음 조건에 부합하는 5개 종목을 필터링.
+  * Fundamental: 최근 3년 평균 ROE 10% 이상 & OPM 15% 이상
+  * Valuation: PEG 지수(Price/Earnings-to-Growth) 1.5 미만
+3. 자산배분 최적화
+  * Library: Riskfolio-Lib 활용
+  * Model: 제약조건부 최대 샤프지수
+  * Constraints: 코너 솔루션 현 방지를 위해 개별 종목 비중 최소 5% ~ 최대 40% 제한
+
+## 4. 결과
+1. 
